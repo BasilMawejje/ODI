@@ -1,0 +1,19 @@
+<h2>Work</h2>
+<% @work.each do |work| %>
+  <%= image_tag work.image_url(:thumb).to_s %><br>
+  <%= work.title %><br>
+  <%= work.description %>
+<% end %>
+
+<h2>Latest News</h2>
+<% @latest_news.each do |latest_news| %>
+  <%= image_tag latest_news.image_url(:thumb).to_s %><br>
+  <%= latest_news.article %><br>
+<% end %>
+
+<h2>Donors</h2>
+<% @donors.each do |donor| %>
+  <%= image_tag donor.image_url(:thumb).to_s %><br>
+  <%= donor.name %><br>
+  <%= donor.description %>
+<% end %>
