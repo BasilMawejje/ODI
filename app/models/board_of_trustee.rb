@@ -1,0 +1,2 @@
+class BoardOfTrustee < ApplicationRecord
+end
