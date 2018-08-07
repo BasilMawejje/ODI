@@ -8,6 +8,13 @@
   text-align: center;
   width: 90%;
   margin: 0 auto;
+  transition: transform .2s;
+}
+
+.home:hover {
+    -ms-transform: scale(1.10); /* IE 9 */
+    -webkit-transform: scale(1.10); /* Safari 3-8 */
+    transform: scale(1.10);
 }
 
 .donor_img{
