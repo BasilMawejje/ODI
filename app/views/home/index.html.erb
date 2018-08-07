@@ -92,7 +92,8 @@
             <%= image_tag(product.image_url(:thumb).to_s, class: "work_img") %><br>
           <% end %>
           <h4><%= product.title %></h4>
-          <div><%= product.description %></div>
+          <div><%= truncate(product.description, :length => 80, :seperator => ' ...') %></div>
+          <%= link_to 'Read More', work_path(@work) %>
         </div>
       </div>
     <% end %>
@@ -107,7 +108,8 @@
   <% @latest_news.each do |latest_news| %>
   <%= image_tag latest_news.image_url.to_s, class: "news_img" %>
   <h3><%= latest_news.title %></h3>
-  <%= latest_news.article %>
+  <%= truncate(latest_news.article, :length => 2000, :seperator => ' ...') %>
+  <%= link_to 'Read More', latest_news_path(@latest_news) %>
   <% end %><br><br>
 </div>
 
@@ -122,7 +124,8 @@
         <div class="home">
           <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
           <h3><%= product.name %></h3>
-          <%= product.description %>
+          <%= truncate(product.description, :length => 120, :seperator => ' ...') %>
+          <%= link_to 'Read More', donors_path(@donors) %>
         </div>
       </div>
     <% end %>
