@@ -12,6 +12,6 @@ ActiveAdmin.register Work do
 #   permitted
 # end
 
-permit_params :image, :name, :description
+permit_params :image, :title, :description
 
 end

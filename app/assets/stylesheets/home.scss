@@ -1,3 +1,49 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.donor_img{
+  border-radius: 100px;
+}
+
+.work_img{
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  .news_img{
+    width: 100%;
+    height: auto;
+    float: left;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .news_img{
+    width: 25%;
+    height: auto;
+    float: left;
+    padding: 10px;
+  }
+}
+
+h2 {
+  text-align: center;
+}
+
+.latest_news{
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+}

@@ -12,6 +12,6 @@ ActiveAdmin.register LatestNews do
 #   permitted
 # end
 
-permit_params :image, :article
+permit_params :image, :title, :article
 
 end

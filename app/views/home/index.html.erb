@@ -1,19 +1,42 @@
+<div class="col-md-12" style="text-align: center;" >
+  <%= render 'flash' %>
+</div>
+
 <h2>Work</h2>
-<% @work.each do |work| %>
-  <%= image_tag work.image_url(:thumb).to_s %><br>
-  <%= work.title %><br>
-  <%= work.description %>
-<% end %>
+<% @work.in_groups_of(4, false).each do |group| %>
+  <div class='row'>
+    <% group.each do |product| %>
+      <div class='col-md-3' style="padding: 10px;">
+        <div class="home">
+          <%= link_to image_tag(product.image_url(:thumb).to_s, class: "work_img"), work_path(@work) %><br>
+          <h4><%= product.title %></h4>
+          <div><%= product.description %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %><br><br>
 
 <h2>Latest News</h2>
-<% @latest_news.each do |latest_news| %>
-  <%= image_tag latest_news.image_url(:thumb).to_s %><br>
-  <%= latest_news.article %><br>
-<% end %>
+<div class="latest_news">
+  <% @latest_news.each do |latest_news| %>
+  <%= image_tag latest_news.image_url.to_s, class: "news_img" %>
+  <h3><%= latest_news.title %></h3>
+  <%= latest_news.article %>
+  <% end %><br><br>
+</div>
 
 <h2>Donors</h2>
-<% @donors.each do |donor| %>
-  <%= image_tag donor.image_url(:thumb).to_s %><br>
-  <%= donor.name %><br>
-  <%= donor.description %>
-<% end %>
+<% @donors.in_groups_of(4, false).each do |group| %>
+  <div class='row'>
+    <% group.each do |product| %>
+      <div class='col-md-3' style="padding: 10px;">
+        <div class="home">
+          <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
+          <h3><%= product.name %></h3>
+          <%= product.description %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %><br><br>
