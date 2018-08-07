@@ -2,13 +2,95 @@
   <%= render 'flash' %>
 </div>
 
-<h2>Work</h2>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <%= image_tag("odi1.jpeg", class: "d-block w-100", style: "height: 350px;") %>
+      </div>
+
+      <div class="item">
+        <%= image_tag("odi2.jpg", class: "d-block w-100", style: "height: 350px;") %>
+      </div>
+
+      <div class="item">
+        <%= image_tag("odi3.png", class: "d-block w-100", style: "height: 350px;") %>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Services Section Start -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Services</span></h2>
+          <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+          <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">ODI provides the following services to the clients.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="item-boxes wow fadeInDown" data-wow-delay="0.2s">
+              <div class="icon">
+                <i class="fa fa-diamond"></i>
+              </div>
+              <h4>ROR Web Development</h4>
+              <p>Ruby on Rails application development using the best practices of MVC and OOP.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="item-boxes wow fadeInDown" data-wow-delay="0.4s">
+              <div class="icon">
+                <i class="fa fa-mobile"></i>
+              </div>
+              <h4>Mobile App Development</h4>
+              <p>Native (iOS/Android/WindowsPhone) mobile application development.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="item-boxes wow fadeInDown" data-wow-delay="0.6s">
+              <div class="icon">
+                <i class="fa fa-laptop"></i>
+              </div>
+              <h4>Angular JS</h4>
+              <p>We apply Angular JS in our RoR based applications and products.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+
+<div class="section-header">
+  <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Works</span></h2>
+  <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+</div>
 <% @work.in_groups_of(4, false).each do |group| %>
   <div class='row'>
     <% group.each do |product| %>
       <div class='col-md-3' style="padding: 10px;">
         <div class="home">
-          <%= link_to image_tag(product.image_url(:thumb).to_s, class: "work_img"), work_path(@work) %><br>
+          <%= link_to work_path(@work) do %>
+            <%= image_tag(product.image_url(:thumb).to_s, class: "work_img") %><br>
+          <% end %>
           <h4><%= product.title %></h4>
           <div><%= product.description %></div>
         </div>
@@ -17,7 +99,10 @@
   </div>
 <% end %><br><br>
 
-<h2>Latest News</h2>
+<div class="section-header">
+  <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Latest <span>News</span></h2>
+  <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+</div>
 <div class="latest_news">
   <% @latest_news.each do |latest_news| %>
   <%= image_tag latest_news.image_url.to_s, class: "news_img" %>
@@ -26,7 +111,10 @@
   <% end %><br><br>
 </div>
 
-<h2>Donors</h2>
+<div class="section-header">
+  <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Donors</span></h2>
+  <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+</div>
 <% @donors.in_groups_of(4, false).each do |group| %>
   <div class='row'>
     <% group.each do |product| %>
