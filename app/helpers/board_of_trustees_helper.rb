@@ -1,0 +1,2 @@
+module BoardOfTrusteesHelper
+end
