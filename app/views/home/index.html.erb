@@ -13,15 +13,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <%= image_tag("odi1.jpg", class: "d-block w-100", style: "height: 350px;") %>
+        <%= image_tag("carousel1.jpg", class: "d-block w-100", style: "height: 350px;") %>
       </div>
 
       <div class="item">
-        <%= image_tag("odi2.jpg", class: "d-block w-100", style: "height: 350px;") %>
+        <%= image_tag("carousel2.jpg", class: "d-block w-100", style: "height: 350px;") %>
       </div>
 
       <div class="item">
-        <%= image_tag("odi3.png", class: "d-block w-100", style: "height: 350px;") %>
+        <%= image_tag("carousel3.png", class: "d-block w-100", style: "height: 350px;") %>
       </div>
     </div>
 
@@ -138,8 +138,7 @@
                 <div class="home">
                   <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
                   <h3><%= product.name %></h3>
-                    <%= truncate(product.description, :length => 80, :seperator => ' ...') %>
-                  <%= link_to 'Read More', donors_path(@donors) %>
+                  <%= product.description %>
                   <hr class="lines wow zoomIn" data-wow-delay="0.3s">
                 </div>
               </div>
