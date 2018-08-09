@@ -9,16 +9,20 @@
   width: 90%;
   margin: 0 auto;
   transition: transform .2s;
+  padding: 5px;
 }
 
 .home:hover {
     -ms-transform: scale(1.10); /* IE 9 */
     -webkit-transform: scale(1.10); /* Safari 3-8 */
     transform: scale(1.10);
+    background-color: #e6f5ff;
+    border: 1px solid #e6f5ff;
 }
 
 .donor_img{
-  border-radius: 100px;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
 }
 
 .work_img{
@@ -132,6 +136,11 @@ h2 {
   font-size: 30px;
   line-height: 60px;
   color: #4676fa;
+}
+
+#myCarousel{
+    width: 90%;
+    margin: 0 auto;
 }
 
 .topnav {

@@ -79,55 +79,73 @@
     </section>
     <!-- Services Section End -->
 
-<div class="section-header">
-  <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Works</span></h2>
-  <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-</div>
-<% @work.in_groups_of(4, false).each do |group| %>
-  <div class='row'>
-    <% group.each do |product| %>
-      <div class='col-md-3' style="padding: 10px;">
-        <div class="home">
-          <%= link_to work_path(@work) do %>
-            <%= image_tag(product.image_url(:thumb).to_s, class: "work_img") %><br>
-          <% end %>
-          <h4><%= product.title %></h4>
-          <div><%= truncate(product.description, :length => 80, :seperator => ' ...') %></div>
-          <%= link_to 'Read More', work_path(@work) %>
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Works</span></h2>
+          <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+        </div>
+        <% @work.in_groups_of(4, false).each do |group| %>
+          <div class='row'>
+            <% group.each do |product| %>
+              <div class='col-md-3' style="padding: 10px;">
+                <div class="home">
+                  <%= link_to work_path(@work) do %>
+                    <%= image_tag(product.image_url(:thumb).to_s, class: "work_img") %><br>
+                  <% end %>
+                  <h4><%= product.title %></h4>
+                  <div><%= truncate(product.description, :length => 80, :seperator => ' ...') %></div>
+                  <%= link_to 'Read More', work_path(@work) %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %><br><br>
+        <div class="col-md-12 text-center">
+          <%= link_to 'See more projects', work_index_path, class: "btn btn-primary", style: "color: white;" %>
         </div>
       </div>
-    <% end %>
-  </div>
-<% end %><br><br>
+    </section>
 
-<div class="section-header">
-  <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Latest <span>News</span></h2>
-  <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-</div>
-<div class="latest_news">
-  <% @latest_news.each do |latest_news| %>
-  <%= image_tag latest_news.image_url.to_s, class: "news_img" %>
-  <h3><%= latest_news.title %></h3>
-  <%= truncate(latest_news.article, :length => 2000, :seperator => ' ...') %>
-  <%= link_to 'Read More', latest_news_path(@latest_news) %>
-  <% end %><br><br>
-</div>
-
-<div class="section-header">
-  <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Donors</span></h2>
-  <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-</div>
-<% @donors.in_groups_of(4, false).each do |group| %>
-  <div class='row'>
-    <% group.each do |product| %>
-      <div class='col-md-3' style="padding: 10px;">
-        <div class="home">
-          <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
-          <h3><%= product.name %></h3>
-          <%= truncate(product.description, :length => 120, :seperator => ' ...') %>
-          <%= link_to 'Read More', donors_path(@donors) %>
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Latest <span>News</span></h2>
+          <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+        </div>
+        <div class="latest_news">
+          <% @latest_news.each do |latest_news| %>
+          <%= image_tag latest_news.image_url.to_s, class: "news_img" %>
+          <h3><%= latest_news.title %></h3>
+          <%= truncate(latest_news.article, :length => 2500, :seperator => ' ...') %>
+          <%= link_to 'Read More', latest_news_path(@latest_news) %>
+          <% end %><br><br>
         </div>
       </div>
-    <% end %>
-  </div>
-<% end %><br><br>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Donors</span></h2>
+          <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+        </div>
+        <% @donors.in_groups_of(4, false).each do |group| %>
+          <div class='row'>
+            <% group.each do |product| %>
+              <div class='col-md-3' style="padding: 10px;">
+                <div class="home">
+                  <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
+                  <h3><%= product.name %></h3>
+                  <%= truncate(product.description, :length => 150, :seperator => ' ...') %>
+                  <%= link_to 'Read More', donors_path(@donors) %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %><br>
+        <div class="col-md-12 text-center">
+          <%= link_to 'See more Donors', donors_path, class: "btn btn-primary", style: "color: white;" %>
+        </div>
+      </div>
+    </section>
