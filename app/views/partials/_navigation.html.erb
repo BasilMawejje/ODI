@@ -1,17 +1,8 @@
 <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <a href="#about">About</a>
+  <%= link_to 'Home', root_path %>
+  <%= link_to 'About ODI' %>
+  <%= link_to 'Board of Trustees', board_of_trustees_path %>
+  <%= link_to 'Membership/Subscription' %>
+  <%= link_to 'Contacts' %>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
