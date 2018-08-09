@@ -1,14 +1,27 @@
-<h2>Our Work</h2>
-<% @work.in_groups_of(4, false).each do |group| %>
-  <div class='row'>
-    <% group.each do |product| %>
-      <div class='col-md-3' style="padding: 10px;">
-        <div class="home">
-          <%= link_to image_tag(product.image_url(:thumb).to_s, class: "work_img") %><br>
-          <h4><%= product.title %></h4>
-          <div><%= product.description %></div>
-        </div>
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Works</span></h2>
+      <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+    </div>
+    <% @work.in_groups_of(4, false).each do |group| %>
+      <div class='row'>
+        <% group.each do |product| %>
+          <div class='col-md-3' style="padding: 10px;">
+            <div class="home">
+              <%= link_to work_path(@work) do %>
+                <%= image_tag(product.image_url(:thumb).to_s, class: "work_img") %><br>
+              <% end %>
+              <h4><%= product.title %></h4>
+              <div><%= truncate(product.description, :length => 80, :seperator => ' ...') %></div>
+              <%= link_to 'Read More', work_path(@work) %>
+            </div>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+    <% end %><br><br>
+    <div class="col-md-12 text-center">
+      <%= link_to 'See more projects', work_index_path, class: "btn btn-primary", style: "color: white;" %>
+    </div>
   </div>
-<% end %><br><br>
+</section>
