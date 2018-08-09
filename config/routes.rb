@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :donors
   resources :home, only: [:index]
   resources :latest_news
-  resources :work
+  resources :works
 end

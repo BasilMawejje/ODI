@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class WorkControllerTest < ActionDispatch::IntegrationTest
+class WorksControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
