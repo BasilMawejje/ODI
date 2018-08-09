@@ -96,6 +96,7 @@
                   <h4><%= product.title %></h4>
                   <div><%= truncate(product.description, :length => 80, :seperator => ' ...') %></div>
                   <%= link_to 'Read More', work_path(@work) %>
+                  <hr class="lines wow zoomIn" data-wow-delay="0.3s">
                 </div>
               </div>
             <% end %>
@@ -115,10 +116,10 @@
         </div>
         <div class="latest_news">
           <% @latest_news.each do |latest_news| %>
+          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s"><span><%= latest_news.title %></span></h2>
+          <hr class="lines wow zoomIn" data-wow-delay="0.3s">
           <%= image_tag latest_news.image_url.to_s, class: "news_img" %>
-          <h3><%= latest_news.title %></h3>
-          <%= truncate(latest_news.article, :length => 2500, :seperator => ' ...') %>
-          <%= link_to 'Read More', latest_news_path(@latest_news) %>
+          <%= latest_news.article %>
           <% end %><br><br>
         </div>
       </div>
@@ -137,8 +138,9 @@
                 <div class="home">
                   <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
                   <h3><%= product.name %></h3>
-                  <%= truncate(product.description, :length => 80, :seperator => ' ...') %>
+                    <%= truncate(product.description, :length => 80, :seperator => ' ...') %>
                   <%= link_to 'Read More', donors_path(@donors) %>
+                  <hr class="lines wow zoomIn" data-wow-delay="0.3s">
                 </div>
               </div>
             <% end %>
