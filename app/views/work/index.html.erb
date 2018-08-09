@@ -10,18 +10,15 @@
           <div class='col-md-3' style="padding: 10px;">
             <div class="home">
               <%= link_to work_path(@work) do %>
-                <%= image_tag(product.image_url(:thumb).to_s, class: "work_img") %><br>
+                <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
               <% end %>
               <h4><%= product.title %></h4>
-              <div><%= truncate(product.description, :length => 80, :seperator => ' ...') %></div>
-              <%= link_to 'Read More', work_path(@work) %>
+              <div><%= product.description %></div>
+              <hr class="lines wow zoomIn" data-wow-delay="0.3s">
             </div>
           </div>
         <% end %>
       </div>
     <% end %><br><br>
-    <div class="col-md-12 text-center">
-      <%= link_to 'See more projects', work_index_path, class: "btn btn-primary", style: "color: white;" %>
-    </div>
   </div>
 </section>

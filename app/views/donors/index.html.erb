@@ -9,8 +9,7 @@
         <div class="home">
           <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
           <h3><%= product.name %></h3>
-          <%= truncate(product.description, :length => 120, :seperator => ' ...') %>
-          <%= link_to 'Read More', donors_path(@donors) %>
+          <%= product.description %>
         </div>
       </div>
     <% end %>

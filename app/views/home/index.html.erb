@@ -91,7 +91,7 @@
               <div class='col-md-3' style="padding: 10px;">
                 <div class="home">
                   <%= link_to work_path(@work) do %>
-                    <%= image_tag(product.image_url(:thumb).to_s, class: "work_img") %><br>
+                    <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
                   <% end %>
                   <h4><%= product.title %></h4>
                   <div><%= truncate(product.description, :length => 80, :seperator => ' ...') %></div>
