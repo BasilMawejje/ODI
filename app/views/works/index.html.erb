@@ -13,7 +13,7 @@
                 <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
               <% end %>
               <h4><%= product.title %></h4>
-              <div><%= truncate(product.description, :length => 80, :seperator => ' ...') %></div>
+              <div><%= product.description %></div>
               <hr class="lines wow zoomIn" data-wow-delay="0.3s">
             </div>
           </div>
