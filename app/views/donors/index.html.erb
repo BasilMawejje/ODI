@@ -1,17 +1,20 @@
-<div class="section-header">
-  <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Donors</span></h2>
-  <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-</div>
-<% @donors.in_groups_of(4, false).each do |group| %>
-  <div class='row'>
-    <% group.each do |product| %>
-      <div class='col-md-3' style="padding: 10px;">
-        <div class="home">
-          <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
-          <h3><%= product.name %></h3>
-          <%= product.description %>
-        </div>
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Donors</span></h2>
+      <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+    </div>
+    <% @donors.in_groups_of(4, false).each do |group| %>
+      <div class='row'>
+        <% group.each do |product| %>
+          <div class='col-md-3' style="padding: 10px;">
+            <div class="home">
+              <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
+              <h3><%= product.name %></h3>
+              <%= product.description %>
+            </div>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-<% end %><br><br>
+    <% end %><br><br>
+</section>

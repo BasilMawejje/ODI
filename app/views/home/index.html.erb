@@ -118,7 +118,9 @@
           <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s"><span><%= latest_news.title %></span></h2>
           <hr class="lines wow zoomIn" data-wow-delay="0.3s">
           <%= image_tag latest_news.image_url.to_s, class: "news_img" %>
-          <%= latest_news.article %>
+          <div class="article">
+            <%= latest_news.article %>
+          </div>
           <% end %><br><br>
         </div>
       </div>
