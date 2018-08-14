@@ -1,0 +1,13 @@
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Board of <span>Trustees</span></h2>
+      <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+    </div>
+    <div class="show_item">
+      <%= image_tag(@board_of_trustees.image_url(:xlarge).to_s, class: "work_img") %><br>
+      <h4><%= @board_of_trustees.name %></h4>
+      <div><%= @board_of_trustees.description %></div>
+      <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+    </div>
+</section>
