@@ -7,7 +7,7 @@
     <% @board_of_trustees.in_groups_of(4, false).each do |group| %>
       <div class='row'>
         <% group.each do |product| %>
-          <div class='col-md-3' style="padding: 10px;">
+          <div class='col-lg-3 col-md-4' style="padding: 10px;">
             <div class="home">
               <%= link_to board_of_trustee_path(product) do %>
                 <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
