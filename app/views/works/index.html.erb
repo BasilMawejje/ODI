@@ -9,7 +9,7 @@
         <% group.each do |product| %>
           <div class='col-md-3' style="padding: 10px;">
             <div class="home">
-              <%= link_to work_path(@work) do %>
+              <%= link_to work_path(product) do %>
                 <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
               <% end %>
               <h4><%= product.title %></h4>

@@ -4,10 +4,16 @@
       <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Works</span></h2>
       <hr class="lines wow zoomIn" data-wow-delay="0.3s">
     </div>
-    <div class="show_item">
-      <%= image_tag(@work.image_url(:xlarge).to_s, class: "work_img") %><br>
-      <h4><%= @work.title %></h4>
-      <div><%= @work.description %></div>
-      <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+  <div class="card">
+    <%= image_tag @work.image_url(:xlarge).to_s %><br>
+    <div class="card-body">
+      <h4 class="card-title"><%= @work.title %></h4>
+      <p class="card-text"><%= @work.description %></p>
     </div>
+    <div class="card-body">
+      <%= link_to 'Back to Projects', works_path %>
+    </div>
+  </div>
+  </div>
+  <hr class="lines wow zoomIn" data-wow-delay="0.3s">
 </section>
