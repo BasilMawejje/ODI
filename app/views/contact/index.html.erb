@@ -32,8 +32,9 @@
                                         placeholder: "Make enquiry to ODI."%>
                                         <div class="help-block with-errors"></div></br>
 
-
-                      <%= f.submit 'Send Message', class: 'btn btn-primary' %><br><br>
+                      <%= button_tag(type: 'submit', class: "btn btn-primary", style: "width: 75%;") do %>
+                       Send Message
+                      <% end %>
                     </div>
                   <% end %>
                 </div>
