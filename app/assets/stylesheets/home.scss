@@ -275,3 +275,95 @@ h2, h3 {
 .card-title{
   font-weight: bold;
 }
+
+.site-info p {
+  text-align: center;
+  line-height: 34px;
+  color: #52565f;
+}
+.site-info p a {
+  color: #52565f;
+}
+.site-info p a:hover {
+  color: #4676fa;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.social-icons ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.social-icons ul li {
+  display: inline;
+}
+.social-icons ul li a {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 254, 254, 0.07);
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+.social-icons ul li a:hover {
+  color: #ffffff;
+}
+.facebook a {
+  color: #4867aa;
+}
+.facebook a:hover {
+  background: #4867aa;
+}
+.twitter a {
+  color: #1da1f2;
+}
+.twitter a:hover {
+  background: #1da1f2;
+}
+.google-plus a {
+  color: #dd4d42;
+}
+.google-plus a:hover {
+  background: #dd4d42;
+}
+.youtube a {
+  color: #df2926;
+}
+.youtube a:hover {
+  background: #df2926;
+}
+.linkedin a {
+  color: #007bb6;
+}
+.linkedin a:hover {
+  background: #007bb6;
+}
+.pinterest a {
+  color: #bd081c;
+}
+.pinterest a:hover {
+  background: #bd081c;
+}
+.dribbble a {
+  color: #ea4c89;
+}
+.dribbble a:hover {
+  background: #ea4c89;
+}
+.behance a {
+  color: #0b7cff;
+}
+.behance a:hover {
+  background: #0b7cff;
+}
+.subscribe-box {
+  margin-top: 18px;
+}
