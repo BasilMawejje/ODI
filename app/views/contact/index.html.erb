@@ -1,0 +1,47 @@
+<!-- Contact Section Start -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-9">
+            <div class="contact-block">
+              <div class="section-header">
+                <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Contact <span>Us</span></h2>
+              </div>
+              <form id="contactForm">
+                <div class="row">
+                  <%= form_for @contact, url: contact_index_path, remote: true do |f| %>
+                    <div class="col-sm-6">
+                      <%= f.label :name %></br>
+                      <%= f.text_field  :name, required: true %>
+                      <div class="help-block with-errors"></div></br>
+
+                      <%= f.label :email %></br>
+                      <%= f.text_field :email, required: true %>
+                      <div class="help-block with-errors"></div></br>
+
+                      <%= f.label :phone %></br>
+                      <%= telephone_field(:contact, :phone, placeholder: "+44 0000 000000") %>
+                      <div class="help-block with-errors"></div></br>
+
+                      <%= f.label :subject %></br>
+                      <%= f.text_field :subject, placeholder: "Assistance to make donation", style: "width: 75%", required: true %>
+                      <div class="help-block with-errors"></div></br>
+
+                      <%= f.label :message %></br>
+                      <%= f.text_area :message, rows: 8, cols: 40, required: true,
+                                        placeholder: "Make enquiry to ODI."%>
+                                        <div class="help-block with-errors"></div></br>
+
+
+                      <%= f.submit 'Send Message', class: 'btn btn-primary' %><br><br>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section End -->

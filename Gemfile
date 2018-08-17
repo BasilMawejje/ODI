@@ -39,6 +39,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'mail_form'
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :home, only: [:index]
   resources :latest_news
   resources :works
+  resources :contact, only: [:index, :new, :create]
 end
