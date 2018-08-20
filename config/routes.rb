@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   resources :latest_news
   resources :works
   resources :contact, only: [:index, :new, :create]
+  resources :subscription
+  get 'plans' => 'subscription#plans'
+  post 'stripe_checkout' => 'subscription#stripe_checkout'
+  post 'subscription_checkout' => 'subscription#subscription_checkout'
+  post 'webhooks' => 'subscription#webhooks'
 end
