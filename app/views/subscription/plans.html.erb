@@ -1,8 +1,8 @@
-<!-- Start Pricing Table Section -->
+    <!-- Start Pricing Table Section -->
     <div id="pricing" class="section pricing-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Pricing <span>Plans</span></h2>
+          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Make a regular <span>Payment</span></h2>
           <hr class="lines wow zoomIn" data-wow-delay="0.3s">
           <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">ODI Retainer Plans</p>
         </div>
@@ -31,13 +31,94 @@
                       data-currency="<%= plan[:currency] %>"
                       data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
                       data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                      data-panel-label="donate">
+                      data-label="Donate <%= ((plan[:amount]).to_i)/100 %> <%= plan[:currency] %>" >
                     </script>
                   <% end %>
                 </div>
               </div>
             </div>
           <% end %>
+        </div>
+      </div>
+    </div>
+
+      <div id="pricing" class="section pricing-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Make a one time <span>Contribution</span></h2>
+            <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+            <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">ODI one time Donation Plans</p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-table wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s">
+              <div class="icon">
+                <i class="fa fa-heart"></i>
+              </div>
+              <div class="pricing-details">
+                <h2>Donate to our UGX Account</h2>
+                <span>Equity Bank Ltd</span>
+                <ul>
+                  <li>One Dollar HIV initiative</li>
+                  <li>Account: 1003200762582</li>
+                  <li>Swift CODE: EQBLUGKA</li>
+                  <li>Branch Code: 1003</li>
+                  <li>Branch Post Code: 30</li>
+                  <li>Account Phone Number: <br> +256 772 633 920</li>
+                  <li>Bank Branch name: Katwe</li>
+                  <li>Bank Address: Kampala, Uganda</li>
+                  <li>Bank city/subueb: Kampala</li>
+                  <li>Bank State/Province: Uganda</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-table wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s">
+              <div class="icon">
+                <i class="fa fa-heart"></i>
+              </div>
+              <div class="pricing-details">
+                <h2>Make a one time donation</h2>
+                <span>Make donation through Paypal</span>
+                <ul>
+                  <li>With PayPal, you can make a donation</li>
+                  <li>Login into Paypal</li>
+                  <li>Click Send & Request at the top of the page.</li>
+                  <li>Select from the 3 options.*</li>
+                  <li>Enter the email address or mobile number to whom you are sending money.</li>
+                  <li>Enter the amount you want to send and click Continue.</li>
+                  <li>Review and confirm the information on the screen and click Send Money Now.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-table wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s">
+              <div class="icon">
+                <i class="fa fa-heart"></i>
+              </div>
+              <div class="pricing-details">
+                <h2>Donate to our USD Account</h2>
+                <span>Equity Bank Ltd</span>
+                <ul>
+                  <li>One Dollar HIV initiative</li>
+                  <li>Account: 1003200762583</li>
+                  <li>Swift CODE: EQBLUGKA</li>
+                  <li>Branch Code: 1003</li>
+                  <li>Branch Post Code: 30</li>
+                  <li>Account Phone Number: <br> +256 772 633 920</li>
+                  <li>Bank Branch name: Katwe</li>
+                  <li>Bank Address: Kampala, Uganda</li>
+                  <li>Bank city/subueb: Kampala</li>
+                  <li>Bank State/Province: Uganda</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
