@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :latest_news
   resources :works
   resources :contact, only: [:index, :new, :create]
+  resources :about, only: [:index]
   resources :subscription
   get 'plans' => 'subscription#plans'
   post 'stripe_checkout' => 'subscription#stripe_checkout'
