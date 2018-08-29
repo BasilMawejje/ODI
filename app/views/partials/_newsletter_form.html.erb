@@ -1,0 +1,8 @@
+<div class="recent">
+  <h3>Subscribe to our newsletter</h3>
+   <%= form_for :newsletter, url: newsletters_path do |f| %>
+     <span><label for="email">Email</label></span>
+     <%= f.text_field :email, class: 'form-control' %>
+     <%= f.submit %>
+   <%end%>
+</div>
