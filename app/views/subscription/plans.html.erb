@@ -119,6 +119,44 @@
             </div>
           </div>
 
+          <div id="pricing" class="section pricing-section">
+            <div class="container">
+              <div class="section-header">
+                <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Make a one time <span>Contribution</span></h2>
+                <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+                <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">ODI one time Donation Plans</p>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="pricing-table wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s">
+                  <div class="icon">
+                    <i class="fa fa-mobile"></i>
+                  </div>
+                  <div class="pricing-details">
+                    <h2>Donate using Mobile Money</h2>
+                    <span>Donate using Mobile Money</span>
+                    <ul>
+                      <li>Educate</li>
+                      <li>Empower</li>
+                      <li>Quality Assurance</li>
+                      <li>Provide prescribed medication</li>
+                    </ul>
+                    <form method="post" action="https://dusupay.com/dusu_payments/dusupay" target="_blank">
+                      <input type="hidden" name="dusupay_merchantId" value="1000" required>
+                      <input type="hidden" name="dusupay_amount" value="5000" optional>
+                      <input type="hidden" name="dusupay_currency" value="UGX" required>
+                      <input type="hidden" name="dusupay_itemId" value="donation_to_ODI" required>
+                      <input type="hidden" name="dusupay_itemName" value="Donation to ODI" required>
+                      <input type="hidden" name="dusupay_transactionReference" value="1420" required>
+                      <input type="hidden" name="dusupay_redirectURL" value="<% root_path %>" optional>
+                      <input type="hidden" name="dusupay_successURL" value="<% root_path %>" optional>
+                      <!--<input type="hidden" name="dusupay_logo" value="" optional>-->
+                      <!--<input type="hidden" name="dusupay_hash" value="hashValue..." required>-->
+                      <input type="image" name="submit" src="https://dusupay.com/img/paybuttons/dusupaybtn6.png" />
+                    </form>
+                  </div>
+                </div>
+              </div>
+
         </div>
       </div>
     </div>
