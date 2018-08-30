@@ -5,7 +5,7 @@ class NewslettersController < ApplicationController
       newsletter.save
       flash[:success] = "You have subscribed successfully"
     else
-      flash[:success] = "Problem in subscription: #{newsletter.errors.full_messages.join(', ')}"
+      flash[:danger] = "Problem in subscription: #{newsletter.errors.full_messages.join(', ')}"
     end
     redirect_to root_path
   end
