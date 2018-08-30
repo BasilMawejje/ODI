@@ -12,6 +12,6 @@ ActiveAdmin.register Newsletter do
 #   permitted
 # end
 
-  permit_params :email
+permit_params :name, :email, :source, :country
 
 end

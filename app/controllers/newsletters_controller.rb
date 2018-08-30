@@ -12,6 +12,6 @@ class NewslettersController < ApplicationController
 
   private
   def newsletter_params
-    params.require(:newsletter).permit(:email)
+    params.require(:newsletter).permit(:name, :email, :source, :country)
   end
 end

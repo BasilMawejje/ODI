@@ -1,8 +1,23 @@
 <div class="recent">
   <h3>Subscribe to our newsletter</h3>
-   <%= form_for :newsletter, url: newsletters_path do |f| %>
-     <span><label for="email">Email</label></span>
-     <%= f.text_field :email, class: 'form-control' %>
-     <%= f.submit %>
-   <%end%>
+  <%= form_for :newsletter, url: newsletters_path do |f| %>
+  <span><label for="name">Name</label></span>
+  <%= f.text_field :name, placeholder: "Name", class: 'form-control' %>
+  <span><label for="email">Email</label></span>
+  <%= f.text_field :email, placeholder: "Email", class: 'form-control' %>
+  <span><label for="country">Country</label></span>
+  <%= f.select(:country, @countries ) %>
+  <%= f.select :source, ["Search Engine", "Social Media", "Word of Mouth", "Other"], prompt: "How did you hear about us?" %>
+  <%= f.submit %>
+  <%end%>
 </div>
+
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Sign up for our <span>Newsletter</span></h2>
+      <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+    </div>
+
+  </div>
+</section>
