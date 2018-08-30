@@ -25,6 +25,3 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /public/uploads
-/views/subscription/plans.html.erb
-/views/subscription/index.html.erb
-controller/subscription_controller.rb
