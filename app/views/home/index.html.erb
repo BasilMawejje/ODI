@@ -107,24 +107,40 @@
       </div>
     </section>
 
-    <section id="services" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Latest <span>News</span></h2>
-          <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-        </div>
-        <div class="latest_news">
-          <% @latest_news.each do |latest_news| %>
-          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s"><span><%= latest_news.title %></span></h2>
-          <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-          <%= image_tag latest_news.image_url.to_s, class: "news_img" %>
-          <div class="article">
-            <%= latest_news.article %>
+<!-- Latets News Section Start -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-9 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">
+        <div class="contact-block">
+          <div class="section-header">
+            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Latest <span>News</span></h2>
+            <hr class="lines wow zoomIn" data-wow-delay="0.3s">
           </div>
-          <% end %><br><br>
+          <div class="latest_news">
+            <% @latest_news.each do |latest_news| %>
+            <h1>
+              <small class="text-muted"><%= latest_news.title %></small>
+              <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+            </h1>
+            <blockquote class="blockquote text-center">
+              <%= image_tag latest_news.image_url.to_s, class: "news_img" %>
+              <p class="mb-0"><%= latest_news.article %></p>
+              <footer class="blockquote-footer">One Dollar HIV Initiative <cite title="Source Title">&copy</cite></footer>
+            </blockquote>
+            <% end %>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+<!-- Latets News Section End -->
+
+
+
+
+
 
     <section id="services" class="section">
       <div class="container">
