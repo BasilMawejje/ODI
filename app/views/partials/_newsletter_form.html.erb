@@ -1,0 +1,45 @@
+<section id="contact" class="section">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-9 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">
+        <div class="contact-block">
+          <div class="section-header">
+            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Subscribe to our <span>Newsletter</span></h2>
+            <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+          </div>
+          <%= form_for :newsletter, url: newsletters_path do |f| %>
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= f.text_field :name, placeholder: "Name", class: 'form-control' %>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= f.text_field :email, placeholder: "Email", class: 'form-control' %>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <h5><b>How did you hear about us?</b></h5>
+              <%= f.select :source, options_for_select(["Search Engine", "Social Media", "Word of Mouth", "Other"]), {}, class: 'btn btn-light' %>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <h5><b>Please select your country</b></h5>
+              <%= f.select(:country, @countries, {include_blank: 'Select your country'}, class: 'btn btn-light' ) %>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <%= button_tag(type: 'submit', class: "btn btn-primary", style: "width: 100%;") do %>
+           Subscribe
+          <% end %>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

@@ -3,5 +3,6 @@ class HomeController < ApplicationController
     @work = Work.all.limit(4)
     @donors = Donor.all.limit(4)
     @latest_news = LatestNews.all.limit(1)
+    @countries = CS.get
   end
 end

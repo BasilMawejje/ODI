@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_17_171605) do
+ActiveRecord::Schema.define(version: 2018_08_30_084748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,28 @@ ActiveRecord::Schema.define(version: 2018_08_17_171605) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
+  end
+
+  create_table "mailkick_opt_outs", force: :cascade do |t|
+    t.string "email"
+    t.string "user_type"
+    t.bigint "user_id"
+    t.boolean "active", default: true, null: false
+    t.string "reason"
+    t.string "list"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_mailkick_opt_outs_on_email"
+    t.index ["user_type", "user_id"], name: "index_mailkick_opt_outs_on_user_type_and_user_id"
+  end
+
+  create_table "newsletters", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "source"
+    t.string "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "works", force: :cascade do |t|
