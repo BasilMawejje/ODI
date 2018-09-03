@@ -124,7 +124,7 @@
               <hr class="lines wow zoomIn" data-wow-delay="0.3s">
             </h1>
             <blockquote class="blockquote text-center">
-              <%= image_tag latest_news.image_url.to_s, class: "news_img" %>
+              <%= image_tag latest_news.image_url(:news).to_s, class: "news_img" %>
               <p class="mb-0"><%= latest_news.article %></p>
               <footer class="blockquote-footer">One Dollar HIV Initiative <cite title="Source Title">&copy</cite></footer>
             </blockquote>
@@ -136,11 +136,6 @@
   </div>
 </section>
 <!-- Latets News Section End -->
-
-
-
-
-
 
     <section id="services" class="section">
       <div class="container">

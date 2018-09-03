@@ -34,7 +34,7 @@
 @media screen and (max-width: 480px) {
   .news_img{
     width: 100%;
-    height: auto;
+    height: 150px;
     float: left;
     padding: 10px;
   }
@@ -42,7 +42,7 @@
 
 @media screen and (min-width: 480px) {
   .news_img{
-    width: 50%;
+    width: 100%;
     height: auto;
     float: left;
     padding: 10px;
@@ -54,7 +54,7 @@ h2, h3 {
 }
 
 .latest_news{
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   text-align: justify;
   white-space: pre-line;
