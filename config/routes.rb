@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   resources :works
   resources :contact, only: [:index, :new, :create]
   resources :about, only: [:index]
-  resources :newsletters, only: [:create]
   resources :subscription
   get 'plans' => 'subscription#plans'
   post 'stripe_checkout' => 'subscription#stripe_checkout'
