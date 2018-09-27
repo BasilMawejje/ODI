@@ -135,7 +135,7 @@
     </div>
   </div>
 </section>
-<!-- Latets News Section End -->
+<!-- Latest News Section End -->
 
     <section id="services" class="section">
       <div class="container">
@@ -175,7 +175,7 @@
               <i class="fa fa-star"></i>
             </div>
             <div class="fact-count">
-              <h3><span><%= @donor.count %></span>+</h3>
+              <h3><span><%= Donor.all.count %></span>+</h3>
               <h4>Donors</h4>
             </div>
           </div>
@@ -188,7 +188,7 @@
               <i class="fa fa-users"></i>
             </div>
             <div class="fact-count">
-              <h3><span><%= @work.count %></span>+</h3>
+              <h3><span><%= Work.all.count %></span>+</h3>
               <h4>Projects Completed</h4>
             </div>
           </div>
@@ -201,7 +201,7 @@
               <i class="fa fa-user"></i>
             </div>
             <div class="fact-count">
-              <h3><span><%= @work.count %></span>+</h3>
+              <h3><span><%= Work.all.count %></span>+</h3>
               <h4>Countries</h4>
             </div>
           </div>
