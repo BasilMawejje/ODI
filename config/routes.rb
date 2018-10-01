@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :secretariat
   resources :governing_board
   resources :donors
+  resources :partners
   resources :home, only: [:index]
   resources :latest_news
   resources :works

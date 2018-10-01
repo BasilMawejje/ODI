@@ -46,3 +46,12 @@ end
                 image: File.open(File.join(Rails.root, 'public/seed_secretariat.jpg'))
                 })
 end
+
+5.times do
+  Partner.create({
+                name: Faker::Name.name,
+                description: Faker::FamilyGuy.quote,
+                image: File.open(File.join(Rails.root, 'public/seed_partners.png')),
+                amount: 30000
+                })
+end
