@@ -70,6 +70,15 @@ ActiveRecord::Schema.define(version: 2018_09_27_080508) do
     t.string "title"
   end
 
+  create_table "newsletters", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "source"
+    t.string "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "works", force: :cascade do |t|
     t.string "title"
     t.text "description"

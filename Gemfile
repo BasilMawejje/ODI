@@ -35,7 +35,6 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem 'activeadmin'
-gem 'pry-byebug'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'bootstrap'
@@ -43,16 +42,19 @@ gem 'jquery-rails'
 gem 'mail_form'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'kaminari'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pry-byebug'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rack-mini-profiler'
   gem 'flamegraph'
   gem 'stackprof'
+  gem 'faker'
 end
 
 group :development do
