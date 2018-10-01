@@ -15,7 +15,7 @@ AdminUser.create!(email: 'admin@example.com', password: 'password', password_con
                 })
 end
 
-10.times do
+15.times do
   Work.create({
                 title: Faker::Name.name,
                 description: Faker::FamilyGuy.quote,
@@ -23,10 +23,26 @@ end
                 })
 end
 
-20.times do
+5.times do
   BoardOfTrustee.create({
                 name: Faker::Name.name,
                 description: Faker::FamilyGuy.quote,
                 image: File.open(File.join(Rails.root, 'public/seed_bot.jpg'))
+                })
+end
+
+5.times do
+  GoverningBoard.create({
+                name: Faker::Name.name,
+                description: Faker::FamilyGuy.quote,
+                image: File.open(File.join(Rails.root, 'public/seed_govboard.jpg'))
+                })
+end
+
+5.times do
+  Secretariat.create({
+                name: Faker::Name.name,
+                description: Faker::FamilyGuy.quote,
+                image: File.open(File.join(Rails.root, 'public/seed_secretariat.jpg'))
                 })
 end

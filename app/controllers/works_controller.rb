@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   def index
-    @work = Work.all
+    @work = Work.page(params[:page]).per(8)
   end
 
   def show

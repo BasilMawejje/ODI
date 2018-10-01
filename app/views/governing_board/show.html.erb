@@ -1,0 +1,19 @@
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Governing <span>Board</span></h2>
+      <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+    </div>
+  <div class="card">
+    <%= image_tag @governingboard.image_url(:show).to_s %><br>
+    <div class="card-body">
+      <h4 class="card-title"><%= @governingboard.name %></h4>
+      <p class="card-text"><%= @governingboard.description %></p>
+    </div>
+    <div class="card-body">
+      <%= link_to 'Back to Board of Trustees', board_of_trustees_path %>
+    </div>
+  </div>
+  </div>
+  <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+</section>

@@ -1,7 +1,7 @@
 <section id="services" class="section">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Board of <span>Trustees</span></h2>
+      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Trust<span>ees</span></h2>
       <hr class="lines wow zoomIn" data-wow-delay="0.3s">
     </div>
     <% @board_of_trustees.in_groups_of(4, false).each do |group| %>
@@ -10,6 +10,55 @@
           <div class='col-lg-3 col-md-4' style="padding: 10px;">
             <div class="home">
               <%= link_to board_of_trustee_path(product) do %>
+                <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
+              <% end %>
+              <h4><%= product.name %></h4>
+              <div><%= product.description %></div>
+              <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %><br><br>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Secretariat<span></span></h2>
+      <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+    </div>
+    <% @secretariat.in_groups_of(4, false).each do |group| %>
+      <div class='row'>
+        <% group.each do |product| %>
+          <div class='col-lg-3 col-md-4' style="padding: 10px;">
+            <div class="home">
+              <%= link_to secretariat_path(product) do %>
+                <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
+              <% end %>
+              <h4><%= product.name %></h4>
+              <div><%= product.description %></div>
+              <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %><br><br>
+</section>
+
+
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Governing <span>Board</span></h2>
+      <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+    </div>
+    <% @governingboard.in_groups_of(4, false).each do |group| %>
+      <div class='row'>
+        <% group.each do |product| %>
+          <div class='col-lg-3 col-md-4' style="padding: 10px;">
+            <div class="home">
+              <%= link_to governing_board_path(product) do %>
                 <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
               <% end %>
               <h4><%= product.name %></h4>
