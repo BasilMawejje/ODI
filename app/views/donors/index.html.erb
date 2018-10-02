@@ -2,24 +2,31 @@
   <div class="container">
     <div class="section-header">
       <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Donors</span></h2>
-      <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+      <hr class="lines wow zoomIn" data-wow-delay="0.3s"><br>
+      <%= form_tag donors_path, :method => :get do %>
+      <%= text_field_tag :search, params[:search], placeholder: 'Search Donor Name', style: "color: #000000;" %>
+      <%= submit_tag "Search", :name => nil, style: 'border-radius: 0px; background: #0066cc;'%>
+      <%end%>
     </div>
-    <% @donors.in_groups_of(4, false).each do |group| %>
+    <div class="col-md-12">
+      <% @donors.in_groups_of(4, false).each do |group| %>
       <div class='row'>
         <% group.each do |product| %>
-          <div class='col-md-3' style="padding: 10px;">
-            <div class="home">
-              <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
-              <h3><%= product.name %></h3>
-              <%= product.description %>
-              <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-            </div>
+        <div class='col-md-3' style="padding: 10px;">
+          <div class="home">
+            <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
+            <h3><%= product.name %></h3>
+            <%= product.description %>
+            <hr class="lines wow zoomIn" data-wow-delay="0.3s">
           </div>
+        </div>
         <% end %>
       </div>
-    <% end %><br><br>
-    <div class="col-md-12" style="font-size: 16px;">
-      <%= paginate @donors %>
-      <%= page_entries_info @donors %>
+      <% end %><br><br>
+      <div class="col-md-12" style="font-size: 16px;">
+        <%= paginate @donors %>
+        <%= page_entries_info @donors %><br>
+        <%= link_to 'Back to list of donors', donors_path %>
+      </div>
     </div>
 </section>

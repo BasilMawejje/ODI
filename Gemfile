@@ -43,6 +43,7 @@ gem 'mail_form'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'kaminari'
+gem "scoped_search"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
