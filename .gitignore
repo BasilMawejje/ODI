@@ -22,6 +22,8 @@
 /public/assets
 .byebug_history
 .env
+config/environments/production.rb
+config/initializers/stripe.rb
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /public/uploads
