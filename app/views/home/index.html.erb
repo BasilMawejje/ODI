@@ -276,28 +276,36 @@
 </div>
 <!-- Counter Section End -->
 
+<div class="top_div">
+  Top Div
+</div>
+<div class="love_counter">
+  <div class="love_count">75%</div>
+  <div class="love_count">30%</div>
+</div>
+
 <!-- Counter section Js Start -->
 <script type="text/javascript">
-  $(window).scroll(function() {
-    var hT = $('#firstCountItem').offset().top,
-        hH = $('#firstCountItem').outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT + hH - wH)) {
-        $('.count').each(function() {
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 900,
-                easing: 'swing',
-                step: function(now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        }); {
-            $('.count').removeClass('count').addClass('counted');
-        };
-    }
-});
+  jQuery(window).scroll(startCounter);
+  function startCounter() {
+      var hT = jQuery('#firstCountItem').offset().top,
+          hH = jQuery('#firstCountItem').outerHeight(),
+          wH = jQuery(window).height();
+      if (jQuery(window).scrollTop() > hT+hH-wH) {
+          jQuery(window).off("scroll", startCounter);
+          jQuery('.count').each(function () {
+              var $this = jQuery(this);
+              jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                  duration: 2000,
+                  easing: 'swing',
+                  step: function () {
+                      $this.text(Math.ceil(this.Counter));
+                  }
+              });
+          }); {
+              $('.count').removeClass('count').addClass('counted');
+          };
+      }
+  }
 </script>
 <!-- Counter section Js End -->
