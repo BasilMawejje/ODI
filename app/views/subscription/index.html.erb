@@ -8,7 +8,7 @@
               <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Create a <span>Plan</span></h2>
             </div>
             <%= form_tag('/subscription',{method: :post}) do %>
-              <div class="col-sm-8">
+              <div class="col-sm-8" id="firstCountItem">
                 <div class="form-group">
                   <label>Plan name</label>
                   <input name="name" type="text"></input>

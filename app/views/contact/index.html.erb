@@ -8,7 +8,7 @@
                 <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Contact <span>Us</span></h2>
               </div>
               <form id="contactForm">
-                <div class="row">
+                <div class="row" id="firstCountItem">
                   <%= form_for @contact, url: contact_index_path, remote: true do |f| %>
                     <div class="col-sm-8">
                       <%= f.label :name %></br>
