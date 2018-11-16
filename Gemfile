@@ -62,6 +62,13 @@ group :development, :test do
   gem 'flamegraph'
   gem 'stackprof'
   gem 'faker'
+  gem 'rspec-rails'
+  gem 'cucumber-rails', require: false
+  gem 'shoulda-matchers'
+  gem 'factory_bot_rails'
+  gem 'launchy'
+  gem 'factory_bot'
+  gem 'rubocop-rspec'
 end
 
 group :development do
@@ -79,6 +86,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'database_cleaner'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
