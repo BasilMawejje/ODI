@@ -1,7 +1,8 @@
 FactoryBot.define do
-  factory :board_of_trustees do
-    name { "Board_of_trusteesName" }
-    description  { "Board_of_trusteesDescription" }
-    image { File.new("#{Rails.root}/spec/fixtures/seed_bot.jpg") }
+
+  factory :board_of_trustee do
+    name { Faker::Name.name }
+    description { Faker::FamilyGuy.quote }
+    image { File.open(File.join(Rails.root, 'public/seed_bot.jpg')) }
   end
 end

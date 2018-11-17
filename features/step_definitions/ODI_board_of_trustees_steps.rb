@@ -4,6 +4,9 @@ end
 
 Given("the following board_of_trustees exist") do |table|
   table.hashes.each do |hash|
-    image = File.new(Rails.root + "spec/fixtures/seed_bot.jpg")
+    board_of_trustees = FactoryBot.create(:board_of_trustee,
+                                      name: "Shondra Donnelly",
+                                      description: "Joe, gag on my fat dauber.",
+                                      image: "File.open(File.join(Rails.root, 'public/seed_bot.jpg'))")
   end
 end
