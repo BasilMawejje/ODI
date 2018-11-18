@@ -1,8 +1,8 @@
 FactoryBot.define do
 
   factory :board_of_trustee do
-    name { Faker::Name.name }
-    description { Faker::FamilyGuy.quote }
+    name { "Shondra Donnelly" }
+    description { "Joe, gag on my fat dauber." }
     image { File.open(File.join(Rails.root, 'public/seed_bot.jpg')) }
   end
 end
