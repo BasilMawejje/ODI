@@ -12,6 +12,6 @@ ActiveAdmin.register Partner do
 #   permitted
 # end
 
-permit_params :image, :title, :description, :amount
+permit_params :image, :title, :description, :amount, :name
 
 end

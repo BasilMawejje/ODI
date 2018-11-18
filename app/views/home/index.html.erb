@@ -163,30 +163,23 @@
 </section>
 <!-- Latest News Section End -->
 
+<!-- Our Partners section start -->
 <section id="services" class="section">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our Life <span>Partners</span></h2>
       <hr class="lines wow zoomIn" data-wow-delay="0.3s">
     </div>
-    <% @partners.in_groups_of(4, false).each do |group| %>
-      <div class='row'>
+    <section class="customer-logos slider">
+      <% @partners.in_groups_of(4, false).each do |group| %>
         <% group.each do |product| %>
-          <div class='col-md-3' style="padding: 10px;">
-            <div class="home">
-              <%= image_tag product.image_url(:thumb).to_s, class: "donor_img" %><br>
-              <h3><%= product.name %></h3><br>
-              <b>Amount Donated</b>: <span><%= number_with_precision(product.amount, :precision => 2, :delimiter => ',') %> $</span><br>
-              <b>Causes Helped</b><br>
-              <%= product.description %><br>
-              <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-            </div>
-          </div>
+          <div class="slide"><%= image_tag product.image_url.to_s, class: "donor_img" %></div>
         <% end %>
-      </div>
-    <% end %><br>
+      <% end %>
+    </section>
   </div>
 </section>
+<!-- Our Partners section end -->
 
 <section id="services" class="section">
   <div class="container">
@@ -301,3 +294,30 @@
   }
 </script>
 <!-- Counter section Js End -->
+
+<!-- Our partners Js start -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1200,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
+<!-- Our partners Js end -->
