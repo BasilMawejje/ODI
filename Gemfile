@@ -69,6 +69,7 @@ group :development, :test do
   gem 'launchy'
   gem 'factory_bot'
   gem 'rubocop-rspec'
+  gem 'mini_racer'
 end
 
 group :development do
