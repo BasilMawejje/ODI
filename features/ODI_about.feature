@@ -8,6 +8,6 @@ Feature: The about page
       And show me the page
       Then I should see "odi_logo.png" image
       Then I should see the title "About Us"
-      Then I should see the text "According to the Joint United Nations Program on HIV/AIDS (UNAIDS)"
+      Then I should see the text "What is One Dollar Initiative (ODI)?"
       And I should see the text "One Dollar HIV Initiative &copy"
       And show me the page
