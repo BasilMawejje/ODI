@@ -5,10 +5,10 @@
       <hr class="lines wow zoomIn" data-wow-delay="0.3s">
     </div>
     <% @board_of_trustees.in_groups_of(4, false).each do |group| %>
-      <div class='row' id="firstCountItem">
+      <div id="firstCountItem">
         <% group.each do |product| %>
           <div class='col-lg-3 col-md-6' style="padding: 10px;">
-            <div class="home">
+            <div>
               <%= link_to board_of_trustee_path(product) do %>
                 <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
               <% end %>
@@ -29,10 +29,10 @@
       <hr class="lines wow zoomIn" data-wow-delay="0.3s">
     </div>
     <% @secretariat.in_groups_of(4, false).each do |group| %>
-      <div class='row'>
+      <div>
         <% group.each do |product| %>
           <div class='col-lg-3 col-md-6' style="padding: 10px;">
-            <div class="home">
+            <div>
               <%= link_to secretariat_path(product) do %>
                 <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
               <% end %>
@@ -53,10 +53,10 @@
       <hr class="lines wow zoomIn" data-wow-delay="0.3s">
     </div>
     <% @governingboard.in_groups_of(4, false).each do |group| %>
-      <div class='row'>
+      <div>
         <% group.each do |product| %>
           <div class='col-lg-3 col-md-6' style="padding: 10px;">
-            <div class="home">
+            <div>
               <%= link_to governing_board_path(product) do %>
                 <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
               <% end %>
