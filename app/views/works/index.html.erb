@@ -7,7 +7,7 @@
     <% @work.in_groups_of(4, false).each do |group| %>
       <div id="firstCountItem">
         <% group.each do |product| %>
-          <div class='col-lg-3 col-md-6' style="padding: 10px;">
+          <div class='col-lg-3 col-md-8' style="padding: 10px;">
             <div>
               <%= link_to work_path(product) do %>
                 <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
