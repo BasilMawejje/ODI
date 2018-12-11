@@ -89,7 +89,7 @@
         <section class="play-video popup-gallery">
           <div class="container">
             <div class="row">
-              <div class="col-md-offset-1 col-md-10">
+              <div class="col-md-offset-1 col-md-12">
                 <div class="video-info text-center">
                   <%= image_tag ('video/video.jpg'), :class => "img-responsive center-block", :alt =>"" %>
 
@@ -113,7 +113,7 @@
         </div>
         <% @work.in_groups_of(4, false).each do |group| %>
             <% group.each do |product| %>
-              <div class='col-lg-3 col-md-8' style="padding: 10px;">
+              <div class='col-sm-6 col-md-3 col-lg-3' style="padding: 10px;">
                 <div class="home">
                   <%= link_to work_path(product) do %>
                     <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
@@ -135,7 +135,7 @@
 <section id="contact" class="section">
   <div class="container">
     <div class="row justify-content-md-center">
-      <div class="col-md-9 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">
+      <div class="col-md-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">
         <div class="contact-block">
           <div class="section-header">
             <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Latest <span>News</span></h2>
