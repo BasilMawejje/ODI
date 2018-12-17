@@ -1,5 +1,5 @@
 <div class="topnav" id="myTopnav">
-  <%= link_to 'Home', root_path, id: 'home_refresh' %>
+  <%= link_to 'Home', root_path, class: 'home_refresh' %>
   <%= link_to 'About ODI', about_index_path %>
   <%= link_to 'ODI Governance', board_of_trustees_path %>
   <%= link_to 'Invest / Donate', plans_path %>
@@ -9,13 +9,13 @@
 </div>
 
 <div class="logo_container">
-  <%= link_to root_path do %>
+  <%= link_to root_path, class: 'home_refresh' do %>
   <%= image_tag('odi_logo_home.png', class: 'logo') %>
   <% end %>
 </div>
 
 <script type="text/javascript">
-  $('#home_refresh').click(function (event) {
+  $('.home_refresh').click(function (event) {
     event.onClick = window.location.reload(); // Prevent link from following its href
   });
 </script>
