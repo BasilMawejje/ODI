@@ -16,6 +16,6 @@
 
 <script type="text/javascript">
   $('.home_refresh').click(function (event) {
-    event.onClick = window.location.reload(); // Prevent link from following its href
+    event.onClick = window.history.go(0); // Prevent link from following its href
   });
 </script>
