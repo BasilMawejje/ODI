@@ -25,15 +25,15 @@
 <section id="services" class="section">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Secretariat<span></span></h2>
+      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Governing <span>Board</span></h2>
       <hr class="lines wow zoomIn" data-wow-delay="0.3s">
     </div>
-    <% @secretariat.in_groups_of(4, false).each do |group| %>
+    <% @governingboard.in_groups_of(4, false).each do |group| %>
       <div>
         <% group.each do |product| %>
           <div class='col-sm-6 col-md-3 col-lg-3' style="padding: 10px;">
             <div>
-              <%= link_to secretariat_path(product) do %>
+              <%= link_to governing_board_path(product) do %>
                 <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
               <% end %>
               <h4><%= product.name %></h4>
@@ -49,15 +49,15 @@
 <section id="services" class="section">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Governing <span>Board</span></h2>
+      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Secretariat<span></span></h2>
       <hr class="lines wow zoomIn" data-wow-delay="0.3s">
     </div>
-    <% @governingboard.in_groups_of(4, false).each do |group| %>
+    <% @secretariat.in_groups_of(4, false).each do |group| %>
       <div>
         <% group.each do |product| %>
           <div class='col-sm-6 col-md-3 col-lg-3' style="padding: 10px;">
             <div>
-              <%= link_to governing_board_path(product) do %>
+              <%= link_to secretariat_path(product) do %>
                 <%= image_tag(product.image_url(:large).to_s, class: "work_img") %><br>
               <% end %>
               <h4><%= product.name %></h4>
