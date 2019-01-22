@@ -5,4 +5,4 @@ Feature: The welcome page
 
   Scenario: User visits the site
     Given I navigate to the index page
-    Then I should see "ODI provides the following services."
+    Then I should see "ODI is aimed at raising domestic resources through an ENDOWMENT FUND to support treatment and stop the flow of new infections."
