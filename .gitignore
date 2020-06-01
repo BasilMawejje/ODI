@@ -26,4 +26,5 @@ config/initializers/stripe.rb
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /public/uploads
+config/database.yml
 config/secrets.yml
